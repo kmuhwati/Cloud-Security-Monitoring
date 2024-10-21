@@ -1,0 +1,27 @@
+<dashboard>
+  <label>AWS Cloud Security Overview</label>
+  <row>
+    <panel>
+      <title>Total Security Events (Last 24 Hours)</title>
+      <single>
+        <search>
+          <query>sourcetype="aws:cloudtrail" | stats count</query>
+          <earliest>-24h@h</earliest>
+          <latest>now</latest>
+        </search>
+      </single>
+    </panel>
+    <panel>
+      <title>Top 5 AWS Services with Security Events</title>
+      <chart>
+        <search>
+          <query>sourcetype="aws:cloudtrail" | top limit=5 eventSource</query>
+          <earliest>-24h@h</earliest>
+          <latest>now</latest>
+        </search>
+        <option name="charting.chart">pie</option>
+      </chart>
+    </panel>
+  </row>
+  <!-- Add more rows and panels as needed -->
+</dashboard>

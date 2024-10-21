@@ -1,0 +1,9 @@
+<nav search_view="search">
+  <view name="overview" default="true" />
+  <view name="iam_activity" />
+  <view name="network_security" />
+  <view name="data_access" />
+  <view name="compute_security" />
+  <view name="alerts" />
+  <view name="search" />
+</nav>
